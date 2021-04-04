@@ -1,4 +1,4 @@
 # Informatica-Aplicata-OOD
-Homeworks - Java 
+Homeworks - Java - 
 Se implementează o componentă de menu reutilizabilă aplicată.
-Command Pattern
+S-a folosit Command Pattern
