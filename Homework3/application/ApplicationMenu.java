@@ -173,7 +173,27 @@ public class ApplicationMenu {
     	viewStudents();
     	
     }
-   
+	private void uiModifyStudent() 
+	{
+		viewStudents();
+		try{
+			System.out.println("Introduceti index-ul studentului: ");
+		int index = consoleIn.nextInt();
+		System.out.println("Introduceti modificarea numelui studentului: ");
+		String nume = consoleIn.next();
+		System.out.println("Introduceti modificarea prenumelui studentului: ");
+		String prenume = consoleIn.next();
+		System.out.println("Introduceti modificarea mediei studentului: ");
+		double medie = consoleIn.nextDouble();
+		System.out.println("Introduceti modificarea specializarii studentului: ");
+		String specializare = consoleIn.next();
+				
+		studentsList.set(index, new Student(nume,prenume,medie,specializare));
+		}catch(IndexOutOfBoundsException ex){
+		
+			System.out.println("Eroare: " + ex.getMessage());
+		}
+	}
     public void load()
     {
         
@@ -191,7 +211,11 @@ public class ApplicationMenu {
        currentItem = new MenuItem("Stergere informatii student", shortCut++, (parameters)->{
     	   	uiDeleteStudent();
        });       
-       menuItems.add(currentItem);      
+       menuItems.add(currentItem); 
+       currentItem = new MenuItem("Modificare informatii student", shortCut++, (parameters)->{
+   	   	uiModifyStudent();
+      });       
+      menuItems.add(currentItem); 
        
        showStudentsOptions.add(new MenuItem("Ordonare alfabetica dupa numele de familie", 1, (parameters) -> {
     	   alfabeticNume();
@@ -226,6 +250,10 @@ public class ApplicationMenu {
     }
     
 }
+
+
+
+
 
 
 
