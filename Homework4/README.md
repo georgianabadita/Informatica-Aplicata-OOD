@@ -1,5 +1,5 @@
 # Informatica-Aplicata-OOD
-Homeworks - Java / Design Patterns
+
 Se dorește implementarea într-o aplicație de tip consolă a funcționalității pentru gestionarea formelor geometrice pe o planșă de lucru în cadrul unei aplicații de editare grafică. Pentru implementarea aplicației se va folosi șablonul de proiectare Composite. 
 De asemenea pentru implementarea aplicației se va refolosi componenta de menu implementată în temele anterioare. Meniul aplicației o sa pună la dispoziție următoarele opțiuni principale:
 
